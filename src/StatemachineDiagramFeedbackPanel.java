@@ -11,7 +11,7 @@ public class StatemachineDiagramFeedbackPanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public StatemachineDiagramFeedbackPanel() {
+	public StatemachineDiagramFeedbackPanel(MainFrame m,String s) {
 		setLayout(new BorderLayout(0, 0));
 		
 		scrollPane = new JScrollPane();

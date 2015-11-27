@@ -11,7 +11,7 @@ public class ClassDiagramFeedbackPanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public ClassDiagramFeedbackPanel() {
+	public ClassDiagramFeedbackPanel(MainFrame m,String s) {
 		setLayout(new BorderLayout(0, 0));
 		
 		scrollPane = new JScrollPane();
