@@ -14,25 +14,20 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.JButton;
 import java.awt.Color;
 
-public class TaskPanel1 extends JPanel {
+public class TaskPanel1 extends Panel {
 	private JLabel label;
 	private final JScrollPane scrollPane = new JScrollPane();
 	private JTextArea txtrAaaaaaaaaaaaaAaaaaaAa;
 	private JButton classButton;
 	private JButton stateButton;
-	MainFrame mf;
-	String str;
+	
 
 	/**
 	 * Create the panel.
 	 */
-	public TaskPanel1(MainFrame m,String s) {
-		
-		mf = m;
-		str = s;
-		this.setName("fp");
-		this.setLayout(null);
-		
+	public TaskPanel1(String s) {
+		super(s);
+				
 		label = new JLabel("\u554F\uFF11.~~~~~");
 		label.setBounds(12, 10, 387, 22);
 		label.setVerticalAlignment(SwingConstants.TOP);
@@ -52,7 +47,7 @@ public class TaskPanel1 extends JPanel {
 		classButton.setBounds(47, 269, 148, 21);
 		classButton.addActionListener(new ActionListener() {//課題１ボタンを押すと、そのパネルに遷移するイベント	
 			public void actionPerformed(ActionEvent e) {
-				pc(mf.PanelNames[2]);
+			
 			}
 		});
 		this.add(classButton);
@@ -63,15 +58,13 @@ public class TaskPanel1 extends JPanel {
 		stateButton.setBounds(228, 269, 171, 21);
 		stateButton.addActionListener(new ActionListener() {//課題１ボタンを押すと、そのパネルに遷移するイベント	
 			public void actionPerformed(ActionEvent e) {
-				pc(mf.PanelNames[3]);
+				
 			}
 		});
 		add(stateButton);
 
 	}
-	public void pc(String str){
-		mf.panelChange((JPanel)this, str);
-	}
+	
 	@Override 
 	public String toString(){
 		return "TaskPanel1";

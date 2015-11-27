@@ -4,14 +4,15 @@ import java.awt.BorderLayout;
 import javax.swing.JTextArea;
 import java.awt.Font;
 
-public class StatemachineDiagramFeedbackPanel extends JPanel {
+public class StatemachineDiagramFeedbackPanel extends Panel {
 	private JScrollPane scrollPane;
 	private JTextArea txtrTT;
 
 	/**
 	 * Create the panel.
 	 */
-	public StatemachineDiagramFeedbackPanel(MainFrame m,String s) {
+	public StatemachineDiagramFeedbackPanel(String s) {
+		super(s);
 		setLayout(new BorderLayout(0, 0));
 		
 		scrollPane = new JScrollPane();
