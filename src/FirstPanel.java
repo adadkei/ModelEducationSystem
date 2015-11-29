@@ -20,7 +20,7 @@ public class FirstPanel extends Panel {
         task1button.addActionListener(new ActionListener() {// 課題１ボタンを押すと、そのパネルに遷移するイベント
                     @Override
                     public void actionPerformed(ActionEvent e) {
-
+                        changeFramePanel(nextMf, nextPanel);
                     }
                 });
         this.add(task1button);
@@ -28,6 +28,7 @@ public class FirstPanel extends Panel {
         task2button = new JButton("\u8AB2\u984C\uFF12");
         task2button.setFont(new Font("Meiryo UI", Font.PLAIN, 15));
         task2button.setBounds(252, 117, 121, 69);
+
         add(task2button);
 
     }

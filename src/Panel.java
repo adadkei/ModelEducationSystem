@@ -1,8 +1,13 @@
 import javax.swing.JPanel;
 
 public class Panel extends JPanel {
-    MainFrame mf;
-    Panel p;
+    MainFrame currentMf;
+    MainFrame nextMf;
+    MainFrame nextMf2;
+    Panel currentPanel;
+    Panel nextPanel;
+    Panel nextPanel2;
+
     String panelName;
     boolean isVisible = false;
 
@@ -19,14 +24,31 @@ public class Panel extends JPanel {
 
     /**
      * @param m
-     *            frameのインスタンス
+     *            現在のframeのインスタンス
      * @param s
      *            panelの名前
      */
     public Panel(MainFrame m, String s) {
         this(s);
-        mf = m;
+        currentMf = m;
     }
+
+    /**
+     * 次のフレームとパネルを取得
+     */
+    public void getNextFramePanel(MainFrame m, Panel p) {
+        nextMf = m;
+        nextPanel = p;
+    }
+
+    /**
+     * 次のフレームとパネルに変えるメソッド
+     */
+    public void changeFramePanel(MainFrame m, Panel p) {
+        m.setVisible(true);
+        p.setVisible(true);
+    }
+
     //
     // /**
     // * @param m

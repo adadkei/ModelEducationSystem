@@ -43,6 +43,11 @@ public class MainFrame extends JFrame {
         addFrameAndPanel(classFrame, cd);
         addFrameAndPanel(stateFrame, sp);
 
+        // 遷移する次のフレームとパネルを取得
+        fp.getNextFramePanel(taskFrame, tp1);
+        tp1.getNextFramePanel(classFrame, cd);
+        tp1.getNextStatemachineFramePanel(stateFrame, sp);
+
     }
 
     /**
